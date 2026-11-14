@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#141713"><title>LAST WIRE · 마지막 전선</title><link rel="stylesheet" href="style.css?v=6"></head>
+<body><div class="grain"></div><main>
+<header><a class="brand" href="./"><span class="brand-icon">✳</span> LAST WIRE<span class="edition">해체 사업부 / 1986</span></a><div class="header-right"><span class="live-dot"></span> OFFLINE OPERATION <button id="equipment" class="icon-button" aria-label="장비와 작업 기록 열기">장비</button><button id="settings" class="icon-button" aria-label="설정 열기">⚙ 설정</button><button id="help" class="icon-button">?</button></div></header>
+<section class="dashboard"><div><span>계약</span><strong id="round">01</strong></div><div><span>보유 자금</span><strong id="bank">₩0</strong></div><div class="target-cell"><span>검수 목표</span><strong id="target">₩1,000</strong><div class="target-meter"><i id="target-fill"></i></div></div><div><span>생존 장비</span><strong id="lives" class="orange">▰ ▰ ▰</strong></div></section>
+<div class="game-layout"><section class="workbench"><div class="section-label"><span><i class="live-dot"></i> <span id="contract-status">검수까지 4회</span></span><span id="device-code">작업 1/4 · 1–4번</span></div>
+<div class="bomb-stage" id="bomb">
+<div class="table-grid" aria-hidden="true"></div><span class="stage-coordinate top-left">FIELD UNIT / 086</span><span class="stage-coordinate top-right" id="serial">86—001</span>
+<div class="device"><img class="bomb-art" src="assets/bomb-device.svg" width="512" height="748" alt="붉은 기폭 장치와 회로판이 장착된 폭탄 본체" draggable="false">
+<div class="readout"><div><span>회수 가능 금액</span><strong id="pot">₩0</strong></div><div class="multiplier"><span>보상 배수</span><strong id="multi">×1.00</strong></div></div>
+<div id="wires" class="wires" aria-label="폭탄 위 절단 가능한 전선"></div><div class="cut-counter" id="cut-count">0 / 6 CUT</div></div>
+<div class="stage-caption"><span class="live-dot"></span> LIVE CIRCUIT <span>시간 제한 없음</span></div></div>
+<div id="loadout" class="loadout-strip" aria-label="장착 장비 네 슬롯"></div>
+<div class="actions"><button id="cut" hidden>선택한 전선 절단</button><button id="cash" class="cash-button"><span>지금 금액으로 정산</span><strong>철수하기 ↗</strong></button></div>
+<p class="action-hint" id="hint">전선에 마우스를 올리거나 터치해 보세요.</p>
+</section><aside><section class="panel"><div class="section-label">장착 도구 <span id="tool-count">0 / 4</span></div><div id="tools" class="tools"></div></section><section class="panel log-panel"><div class="section-label">작업 기록 <span>LOG</span></div><div id="log" aria-live="polite"></div></section></aside></div>
+<footer><span class="footer-motto">한 가닥 더, 혹은 지금 철수.</span><button id="restart">새 작업 시작 ↻</button><span id="best">최고 기록 ₩0</span></footer>
+</main><div id="toast" role="status"></div><div id="overlay" class="overlay" hidden><section class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"></section></div><script src="game.js?v=6"></script></body></html>
